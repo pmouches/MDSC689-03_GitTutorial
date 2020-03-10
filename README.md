@@ -17,11 +17,13 @@ Github is a website hosting git repositositories.
 4. Modify your files: once your modifications are relevant (e.g. you implemented a new feature that works), use the command *git commit myModifiedFile -m"my message"* to commit your changes.
 5. Once your done working for the day, send all your commits to the server using the command *git push*. /!\ Your collegues might have modified the code while you were working! Before pushing your modifications, use the command *git pull* to fetch their modification. If they modified the same files as you git will automatically merge both your modifications. If you modified the same line of code, git will ask you to manually merge the files.
 
+![Alt text](/images/gitimage.png?raw=true "Optional Title")
+
 **About the commits**
 
 * Commiting your modifications is important as you can easily cancel your last commits *git reset --hard HEAD^*.
-* Use explicit messages for each commit to keep your repository easy to use (option *-m "message"*).
-* You can come back to a previous version of your code using *git checkout myFile commitHash*. Use *HEAD* as *commitHash* to undo all the non commited changes (i.e. go back to your las commited version).
+* Use explicit messages for each commit to keep your repository clean (option *-m "message"*).
+* You can come back to a previous version of your code using *git checkout myFile commitHash*. Use *HEAD* as *commitHash* to undo all the non commited changes (i.e. go back to your last commited version).
 
 **Other usefull commands**
 * *git diff myFile*: Show the local differences between your file and the last commited version
