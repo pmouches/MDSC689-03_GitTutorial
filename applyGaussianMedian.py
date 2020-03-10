@@ -105,7 +105,10 @@ if (optionFilter == "gaussian"):
 						   sum += voxelValue * kernel[i - x + 1][j - y + 1][k - z + 1]						   
 				#Do not forget to divide to avoid excesively big values
 				gaussianAverage = sum / 72.0
-				resultImage.SetScalarComponentFromFloat(x, y, z, 0, gaussianAverage)		   
+				resultImage.SetScalarComponentFromFloat(x, y, z, 0, gaussianAverage)
+if (optionFilter == ""):
+	print ("No filtering will be applied")
+
 		
 mapperNifti = vtk.vtkImageMapper()
 mapperNifti.SetInputData(resultImage)
